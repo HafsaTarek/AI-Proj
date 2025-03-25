@@ -21,7 +21,7 @@ from imblearn.over_sampling import RandomOverSampler
 """Preprocessign (**Cleaning** the data for better accuracy)"""
 
 # Load Data
-df = pd.read_excel('D:/AI Model/Project.xlsx')
+df = pd.read_excel('D:/AI Model/Project2.xlsx')
 
 # Convert percentage values to decimals
 #The model can't handle symbols like % so I removed it
@@ -109,3 +109,5 @@ joblib.dump(scaler, 'scaler.pkl')
 joblib.dump(label_encoder, 'label_encoder.pkl')
 
 print("Model and preprocessing objects have been saved.")
+
+
