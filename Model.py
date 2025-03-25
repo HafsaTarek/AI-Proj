@@ -51,7 +51,7 @@ X = scaler.fit_transform(df[numeric_cols])
 
 # Feature selection
 # This improves model performance by removing less informative features.
-selector = SelectKBest(score_func=f_classif, k=5)  # Select top 8 features
+selector = SelectKBest(score_func=f_classif, k=8)  # Select top 8 features
 X_selected = selector.fit_transform(X, y)
 
 print("Class distribution in dataset:\n", np.unique(y, return_counts=True))
