@@ -12,7 +12,7 @@ Original file is located at
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.feature_selection import SelectKBest, f_classif
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
@@ -46,7 +46,7 @@ dict(zip(label_encoder.classes_, label_encoder.transform(label_encoder.classes_)
 # This ensures all features contribute equally to the model, preventing bias from large values.
 # Particularly useful for models like KNN, SVM, and Neural Networks.
 numeric_cols = df.select_dtypes(include=[np.number]).columns.drop(['التصنيف_رقمي'])
-scaler = MinMaxScaler()
+scaler = StandardScaler()
 X = scaler.fit_transform(df[numeric_cols])
 
 # Feature selection
