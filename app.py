@@ -56,15 +56,16 @@ st.markdown("""
 st.write("Please enter the data to make a prediction:")
 
 # Create input fields for each feature
-رأس_المال = st.number_input('رأس المال', min_value=0.0, format="%.2f")
-نسبة_السيولة = st.number_input('نسبة السيولة', min_value=0.0, format="%.2f")
-مضاعف_حقوق_الملكية = st.number_input('مضاعف حقوق الملكية', min_value=0.0, format="%.2f")
-صافي_الربح = st.number_input('صافي الربح', min_value=0.0, format="%.2f")
-معدل_دوران_الاصول = st.number_input('معدل دوران الاصول', min_value=0.0, format="%.2f")
-نسبة_الديون_الى_حقوق_الملكية = st.number_input('نسبة الديون الى حقوق الملكية', min_value=0.0, format="%.2f")
-الديون_الى_اجمالي_الخصوم = st.number_input('الديون الى اجمالي الخصوم', min_value=0.0, format="%.2f")
-العائد_على_الأصول_ROA = st.number_input('العائد على الأصول ROA', min_value=0.0, format="%.2f")
-العائد_على_حقوق_الملكية_ROI = st.number_input('العائد على حقوق الملكية ROI', min_value=0.0, format="%.2f")
+رأس_المال = st.number_input('رأس المال',  format="%.2f")
+نسبة_السيولة = st.number_input('نسبة السيولة', format="%.2f")
+مضاعف_حقوق_الملكية = st.number_input('مضاعف حقوق الملكية',  format="%.2f")
+صافي_الربح = st.number_input('صافي الربح',  format="%.2f")
+معدل_دوران_الاصول = st.number_input('معدل دوران الاصول',  format="%.2f")
+نسبة_الديون_الى_حقوق_الملكية = st.number_input('نسبة الديون الى حقوق الملكية',  format="%.2f")
+الديون_الى_اجمالي_الخصوم = st.number_input('الديون الى اجمالي الخصوم',  format="%.2f")
+العائد_على_الأصول_ROA = st.number_input('العائد على الأصول ROA',  format="%.2f")
+العائد_على_حقوق_الملكية_ROI = st.number_input('العائد على حقوق الملكية ROI', format="%.2f")
+
 
 # Collect all inputs into a DataFrame
 input_data_manual = pd.DataFrame({
